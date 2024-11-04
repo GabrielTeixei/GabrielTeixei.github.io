@@ -802,21 +802,20 @@ Contacos seção */
     }
 
     @media (max-width: 760px) {
-        #contact {
-            padding: 5px 0;
-            min-height: 50vh; 
-            margin-top: -50px; 
-        }
-    
         .contact-info {
-            margin-top: 50px; 
+            margin-top: 20px; /* Reduz a margem superior para encurtar a distância */
         }
     
         .contact-title {
-            font-size: 16vw; 
-            margin: 5px 0; 
+            font-size: 16vw; /* Mantém o tamanho do título ajustado */
+            margin: 0; /* Remove a margem ao redor do título */
+        }
+    
+        .back-to-top {
+            margin-top: 10px; /* Adiciona uma pequena margem acima do botão */
         }
     }
+    
     
 
 }
