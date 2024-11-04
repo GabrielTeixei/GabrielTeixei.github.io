@@ -615,12 +615,13 @@ section {
 
 @media (max-width: 768px) {
     .project-details h1 {
-        font-size: 6.5vw;
+        font-size: 10vw;
+        margin-top: 10%;
     }
 
     .project-details p {
-        font-size: 2.5vw;
-        margin-bottom: 15px;
+        font-size: 3.5vw;
+        margin-bottom: 25px;
     }
 
     .project-preview img {
@@ -628,8 +629,9 @@ section {
     }
 
     .discover-btn {
-        font-size: 1.8vw;
-        margin-top: 20px; 
+        font-size: 3.5vw;
+        margin-top: 5%; 
+        padding: 12px 25px; 
     }
 }
 
