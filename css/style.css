@@ -817,11 +817,11 @@ Contacos seção */
     } */
     @media (max-width: 760px) {
         .contact-title {
-            font-size: 14vw; /* Diminuindo o tamanho do título */
+            font-size: 10vw; /* Diminuindo o tamanho do título */
         }
     
         .nav-links a, .social-links a, .legal-links a {
-            font-size: 1em; /* Diminuindo o tamanho dos links dos botões */
+            font-size: 0.8em; /* Diminuindo o tamanho dos links dos botões */
         }
     
         .btn-back {
