@@ -801,20 +801,34 @@ Contacos seção */
         display: none;
     }
 
-    @media (max-width: 760px) {
+    /* @media (max-width: 760px) {
         .contact-info {
-            margin-top: 20px; /* Reduz a margem superior para encurtar a distância */
+            margin-top: 20px;
         }
     
         .contact-title {
-            font-size: 16vw; /* Mantém o tamanho do título ajustado */
-            margin: 0; /* Remove a margem ao redor do título */
+            font-size: 16vw; 
+            margin: 0;
         }
     
         .back-to-top {
-            margin-top: 10px; /* Adiciona uma pequena margem acima do botão */
+            margin-top: 10px; 
+        }
+    } */
+    @media (max-width: 760px) {
+        .contact-title {
+            font-size: 14vw; /* Diminuindo o tamanho do título */
+        }
+    
+        .nav-links a, .social-links a, .legal-links a {
+            font-size: 1em; /* Diminuindo o tamanho dos links dos botões */
+        }
+    
+        .btn-back {
+            font-size: 1em; /* Diminuindo o tamanho do botão "BACK TO TOP" */
         }
     }
+    
     
     
 
