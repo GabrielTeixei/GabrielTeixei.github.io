@@ -763,5 +763,35 @@ Contacos seção */
     .back-to-top {
         display: none; 
     }
+    @media (max-width: 760px) {
+        .contact-container {
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            margin-top: 5rem;
+        }
+    
+        .nav-links, .social-links, .legal-links {
+            margin: 15px 0;
+            width: 100%;
+        }
+    
+        .nav-links h2, .social-links h2, .legal-links h2 {
+            font-size: 1.8em;
+        }
+    
+        .nav-links a, .social-links a, .legal-links a {
+            font-size: 1.2em;
+        }
+    
+        .btn-back {
+            font-size: 1.3em;
+        }
+    
+        .contact-title {
+            font-size: 18vw;
+        }
+    }
+    
 }
 
