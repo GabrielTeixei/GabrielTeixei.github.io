@@ -451,6 +451,57 @@ section {
     padding: 0;
 }
 
+
+
+/* Seleção de wroks  -------------------------------------- */
+.selectedwork {
+    background-color: #252525;
+    color: #ffffff;
+    text-align: center;
+    width: 100%;
+    border-top-left-radius: 150px;
+    border-top-right-radius: 150px;
+    padding: 3.5rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5em; 
+}
+
+.text-line {
+    font-size: 15em;
+    font-weight: bold;
+    width: 90%;
+}
+
+.text-left {
+    text-align: left;
+    padding-left: 2rem;
+}
+
+.text-right {
+    text-align: right;
+    padding-right: 2rem;
+}
+@media (max-width: 768px) {
+    .selectedwork {
+        padding: 2rem 0; 
+        border-top-left-radius: 100px; 
+        border-top-right-radius: 100px;
+    }
+
+    .text-line {
+        font-size: 8em; 
+        width: 80%; 
+    }
+
+    .text-left, .text-right {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+}
+
+
 /* progetos secao  -------------------------------------- */
 #works {
     display: flex;
