@@ -485,13 +485,13 @@ section {
 }
 @media (max-width: 750px) {
     .selectedwork {
-        padding: 2rem 0; 
+        padding: 2.5rem 0; 
         border-top-left-radius: 100px; 
         border-top-right-radius: 100px;
     }
 
     .text-line {
-        font-size: 2.5em; 
+        font-size: 3.5em; 
         width: 80%; 
     }
 
