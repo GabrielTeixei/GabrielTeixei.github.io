@@ -476,6 +476,7 @@ section {
 
 .text-left {
     text-align: left;
+
     padding-left: 2rem;
 }
 
@@ -502,7 +503,6 @@ section {
 }
 
 
-/* progetos secao  -------------------------------------- */
 #works {
     display: flex;
     flex-direction: column;
@@ -572,6 +572,7 @@ section {
     bottom: 100px;
 }
 
+.project-preview video,
 .project-preview img {
     width: 100%;
     height: auto;
@@ -581,20 +582,16 @@ section {
     transition: opacity 1s ease, transform 1s ease;
 }
 
-.info-section {
-    opacity: 0;
-    transform: translateY(100px);
-    transition: opacity 1s ease, transform 1s ease;
-}
-
-.info-section.animate-in {
-    opacity: 1;
-    transform: translateY(0);
-}
-
+.project-preview video.animate-in,
 .project-preview img.animate-in {
     opacity: 1;
     transform: translateY(0);
+}
+
+.project-preview img.animate-out,
+.project-preview video.animate-out {
+    opacity: 0;
+    transform: translateY(100px);
 }
 
 .fragile-effect {
@@ -627,6 +624,15 @@ section {
     color: #ffffff;
 }
 
+.project-preview video {
+    width: 100%;
+    height: auto;
+    max-width: 700px;
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 1s ease, transform 1s ease;
+}
+
 @media (max-width: 1200px) {
     .project-details h1 {
         font-size: 8vw;
@@ -637,6 +643,10 @@ section {
     }
 
     .project-preview img {
+        max-width: 550px;
+    }
+
+    .project-preview video {
         max-width: 550px;
     }
 }
@@ -672,7 +682,8 @@ section {
         margin-bottom: 30px;
     }
 
-    .project-preview img {
+    .project-preview img,
+    .project-preview video {
         max-width: 500px;
     }
 
@@ -694,7 +705,8 @@ section {
         margin-bottom: 25px;
     }
 
-    .project-preview img {
+    .project-preview img,
+    .project-preview video {
         max-width: 450px;
     }
 
@@ -704,7 +716,6 @@ section {
         padding: 12px 25px;
     }
 }
-
 
 /* 
 Contacos seção */
