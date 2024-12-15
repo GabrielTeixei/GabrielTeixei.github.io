@@ -108,46 +108,6 @@ function animateLargeName() {
     });
 }
 
-
-// // Função para abrir o menu de navegação com animação
-// function openNav() {
-//     const nav = document.getElementById("myNav");
-//     nav.classList.add('open');
-//     document.querySelector('.closebtn').style.display = 'block';
-//     document.getElementById("openBtn").style.display = 'none';
-
-//     const navItems = document.querySelectorAll('.nav-item');
-//     navItems.forEach((item, index) => {
-//         setTimeout(() => {
-//             item.classList.add('animate-in');
-//         }, index * 100); 
-//     });
-// }
-
-// // Função para fechar o menu de navegação com animação
-// function closeNav() {
-//     const nav = document.getElementById("myNav");
-//     const navItems = document.querySelectorAll('.nav-item');
-
-//     navItems.forEach((item, index) => {
-//         setTimeout(() => {
-//             item.classList.remove('animate-in');
-//             item.classList.add('animate-out');
-//         }, index * 100); 
-//     });
-
-//     setTimeout(() => {
-//         nav.classList.remove('open');
-//         document.querySelector('.closebtn').style.display = 'none';
-//         document.getElementById("openBtn").style.display = 'block';
-
-//         navItems.forEach(item => {
-//             item.classList.remove('animate-out');
-//         });
-//     }, navItems.length * 100 + 30); 
-// }
-
-
 const projects = document.querySelectorAll('.info-section');
 const projectImages = document.querySelectorAll('.project-preview img');
 
@@ -189,4 +149,18 @@ videoElement.addEventListener('mousemove', (event) => {
 
 videoElement.addEventListener('mouseleave', () => {
     customCursor.style.display = 'none';
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+    const videos = document.querySelectorAll('.project-preview video');
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('animate-in'); 
+            }
+        });
+    }, { threshold: 0.5 }); 
+
+    videos.forEach(video => observer.observe(video));
 });
