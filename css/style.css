@@ -638,14 +638,23 @@ section {
     width: 100%;
     height: auto;
     max-width: 700px;
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 1s ease, transform 1s ease;
     opacity: 0; 
-    transform: translateY(100px);
-    transition: opacity 1s ease, transform 1s ease; 
+    transform: translateY(100px); 
 }
 
 .project-preview video.animate-in {
     opacity: 1; 
     transform: translateY(0); 
+}
+
+@media (max-width: 768px) {
+    .project-preview video {
+        max-width: 100%;
+        transform: translateY(50px); 
+    }
 }
 
 

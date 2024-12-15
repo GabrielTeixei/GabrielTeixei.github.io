@@ -108,6 +108,7 @@ function animateLargeName() {
     });
 }
 
+
 const projects = document.querySelectorAll('.info-section');
 const projectImages = document.querySelectorAll('.project-preview img');
 
@@ -157,10 +158,10 @@ document.addEventListener('DOMContentLoaded', () => {
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                entry.target.classList.add('animate-in'); 
+                entry.target.classList.add('animate-in'); // Adiciona a classe para animar
             }
         });
-    }, { threshold: 0.5 }); 
+    }, { threshold: 0.5 }); // A animação é disparada quando 50% do vídeo está visível
 
     videos.forEach(video => observer.observe(video));
 });
