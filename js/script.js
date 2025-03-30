@@ -158,10 +158,34 @@ document.addEventListener('DOMContentLoaded', () => {
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                entry.target.classList.add('animate-in'); // Adiciona a classe para animar
+                entry.target.classList.add('animate-in'); 
             }
         });
-    }, { threshold: 0.5 }); // A animação é disparada quando 50% do vídeo está visível
+    }, { threshold: 0.5 }); 
 
     videos.forEach(video => observer.observe(video));
 });
+function openNav() {
+    const navOverlay = document.getElementById("myNav");
+    navOverlay.classList.add("open");
+
+    const navItems = document.querySelectorAll('.nav-item');
+    navItems.forEach((item, index) => {
+        setTimeout(() => {
+            item.classList.remove('animate-out'); 
+            item.classList.add('animate-in'); 
+        }, index * 100); 
+    });
+}
+
+function closeNav() {
+    const navOverlay = document.getElementById("myNav");
+    navOverlay.classList.remove("open");
+
+    const navItems = document.querySelectorAll('.nav-item');
+    navItems.forEach(item => {
+        item.classList.remove('animate-in'); 
+        item.classList.add('animate-out'); 
+    });
+}
+

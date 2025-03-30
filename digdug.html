@@ -9,11 +9,72 @@
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
     <link rel="icon" href="./assets/img/logo.png" type="image/png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-</head>
+    <style>
+        /* Estilo do menu lateral */
+        #myNav {
+            height: 100%;
+            width: 0;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            background-color: #111;
+            overflow-x: hidden;
+            transition: 0.5s;
+            padding-top: 60px;
+        }
 
+        #myNav a {
+            padding: 8px 8px 8px 32px;
+            text-decoration: none;
+            font-size: 25px;
+            color: #818181;
+            display: block;
+            transition: 0.3s;
+        }
+
+        #myNav a:hover {
+            color: #f1f1f1;
+        }
+
+        #myNav .close-btn {
+            position: absolute;
+            top: 0;
+            right: 25px;
+            font-size: 36px;
+            margin-left: 50px;
+        }
+
+        /* Estilo do botão de abrir menu */
+        .open-btn {
+            font-size: 20px;
+            color: white;
+
+            padding: 10px;
+            cursor: pointer;
+            position: absolute;
+            top: 20px;
+            left: 20px;
+        }
+    </style>
+</head>
 <body>
-    <div class="container">
-        <img src="./assets/img/DIgDug.png" alt="BoockVault Banner" class="header-img">
+    <!-- Menu lateral -->
+    <div id="myNav" class="overlay">
+        <a href="javascript:void(0)" class="close-btn" onclick="closeNav()">&times;</a>
+        <a href="/">Home</a> 
+        <a href="#about">Sobre</a>
+        <a href="#works">Projetos</a>
+        <a href="#contact">Contato</a>
+    </div>
+    
+
+    <!-- Botão para abrir o menu -->
+    <span class="open-btn" onclick="openNav()">☰ Menu</span>
+
+    <!-- Conteúdo principal -->
+    <div class="container" id="home"> <!-- Adicionamos o id aqui -->
+        <img src="./assets/img/DIgDug.png" alt="DigDug Banner" class="header-img">
 
         <div class="main-content">
             <div class="text-container">
@@ -22,20 +83,42 @@
                     <i class="fab fa-python technology-icon" title="Python"></i>
                 </div>
                 <p class="description">
-                    BoockVault é uma plataforma inovadora para armazenamento e organização de livros digitais. Com uma
-                    interface
-                    moderna e intuitiva, permite aos usuários acessar, organizar e compartilhar sua biblioteca digital
-                    de maneira
-                    eficiente e prática. Explore agora e transforme sua experiência de leitura.
+                    DigDug é um projeto baseado no famoso jogo retro de mesmo nome, onde o objetivo é
+                    cavar túneis, derrotar inimigos e coletar tesouros. Este projeto foi desenvolvido utilizando a
+                    linguagem de programação Python, empregando técnicas de inteligência artificial (IA) para criar
+                    inimigos e desafios interativos dentro do jogo. É um projeto simples, mas desafiador, perfeito
+                    para quem quer explorar conceitos de IA e programação de jogos.
                 </p>
             </div>
             <div class="btn-container">
-                <button class="btn-github">
+                <a class="btn-github" href="https://github.com/GabrielTeixei/IA" target="_blank">
                     <i class="fab fa-github"></i> GitHub
-                </button>
+                </a>
             </div>
         </div>
     </div>
-</body>
 
+    <script>
+        // Função para abrir o menu lateral
+        function openNav() {
+            document.getElementById("myNav").style.width = "250px";
+        }
+
+        // Função para fechar o menu lateral
+        function closeNav() {
+            document.getElementById("myNav").style.width = "0";
+        }
+
+        // Adiciona rolagem suave ao clicar nos links do menu
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener("click", function (e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute("href")).scrollIntoView({
+            behavior: "smooth"
+        });
+    });
+});
+
+    </script>
+</body>
 </html>

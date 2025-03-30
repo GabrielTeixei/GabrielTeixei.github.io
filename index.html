@@ -32,6 +32,8 @@
 
     <!-- Menu -->
     <div id="myNav" class="nav-overlay">
+        <a id="openBtn" class="openbtn" onclick="openNav()">☰</a>
+
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
         <div class="header">
             <span>GABRIEL MELO - Portfolio 2024</span>
@@ -51,20 +53,76 @@
         </div>
     </div>
     <!-- Home -->
-    <section id="home" class="Home"></section>
-        aqui titulo e imguem 
-        tipo Ola sou o gabriel Teixiera para me conehcer mais aqui em baxio
-    <!-- About -->
-    <div id="about" class="About"></div>
-        meus dados NEI colaborador , ENEI , e etc 
-
+    <section id="home" class="home-section">
+        <div class="home-container">
+            <div class="home-text">
+                <h1>Hi, I'm Gabriel</h1>
+                <p>Sou estudante de Engenharia Informática na Universidade de Aveiro. Sempre em busca de novos desafios e aprendizados no mundo da tecnologia!</p>
+                <div class="buttons">
+                    <a href="assets/img/curriculo.pdf" class="btn" download="Curriculo_Gabriel">CV</a>
+                    <a href="#experiencias" class="btn">Ver Experiências</a>
+                </div>
+            </div>
+            <div class="home-image">
+                <img src="assets/img/coffe.png" alt="Gabriel Teixeira">
+            </div>
+        </div>
+    </section>
+    
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <div class="about-container">
+           
+            <div class="certificates">
+                <h3 class="section-title">Certificados</h3>
+                <div class="certificates-container">
+                    <div class="certificate-item">
+                        <div class="certificate-image">
+                            <img src="assets/img/Jogos.jpeg" alt="Certificado de Voluntariado">
+                        </div>
+                        <div class="certificate-text">
+                            <h4>Certificado de Voluntariado nos jogos matetematirocs </h4>
+                            <p>Certificado de Voluntariado nos jogos matetematirocs</p>
+                        </div>
+                    </div>
+                    <div class="certificate-item">
+                        <div class="certificate-image">
+                            <img src="assets/img/" alt="Certificado de Estágio">
+                        </div>
+                        <div class="certificate-text">
+                            <h4>Caderia de Criatividade e Narrativada</h4>
+                            <p>Experiência extracurricular</p>
+                            <p><a href="assets/img/uaCertidaoAprovacaoDisciplinas_107876_110230 (2).pdf" target="_blank">Clique aqui para visualizar </a>.</p>
+                        </div>
+                    </div>
+                    <div class="certificate-item">
+                        <div class="certificate-image">
+                            <img src="assets/img/gabriel_teixeira-credential-307_page-0001.jpg" alt="Certificado de Participação">
+                        </div>
+                        <div class="certificate-text">
+                            <h4>Certificado de Participação do ENEI 2023</h4>
+                            <p>Participação ENEI - Encontro Nacional de Estudantes de Informática</p>
+                            <p><a href="assets/img/gabriel_teixeira-credential-307.pdf" target="_blank">Clique aqui para visualizar </a>.</p>
+                        </div>
+                    </div>
+                    <div class="certificate-item">
+                        <div class="certificate-image">
+                            <img src="assets/img/nei.png" alt="Certificado de Voluntariado">
+                        </div>
+                        <div class="certificate-text">
+                            <h4>Voluntariado Nei</h4>
+                            <p>Volundario anos: 2023 - 2024 , parte acadeimica e desportiva</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
      <!-- selectedwork -->
-    <div class="selectedwork">
+    <div id="works" class="selectedwork">
         <div class="text-line text-left">SELECTED</div>
         <div class="text-line text-right">WORKS</div>
     </div>
-
-
     <!-- Primeiro Projeto -->
     <section class="Works works-project1">
         <div class="info-section">
@@ -105,24 +163,26 @@
             </div>
         </div>
     </section>
-
-
-
     <!-- Terceiro Projeto -->
     <section class="Works works-project3">
         <div class="info-section">
             <div class="project-details">
-                <p>LOGO DESIGN / BRANDING/ <a href="link1.html" class="nav-link"> GITHUB</a></p>
-                <h1>Algo</h1>
-                <a href="#" class="discover-btn">MORE ABOUT THE PROJECT</a>
+                <p>IA / PYTHON / GITHUB
+                    <a href="https://github.com/GabrielTeixei/Coffe_shop" class="nav-link">/ GITHUB</a>
+                </p>
+                <h1>DIGDUG</h1>
+                <a href="./digdug.html" class="discover-btn">MORE ABOUT THE PROJECT</a>
             </div>
             <div class="project-preview">
-                <img class="fragile-effect" src="assets/img/DIgDug.png" alt="Portfolio Project Preview">
+                <a href="digdug.html">
+                    <img class="fragile-effect" src="assets/img/DIgDug.png" alt="App Project Preview">
+                </a>
             </div>
         </div>
     </section>
 
     <!-- Quarto Projeto -->
+<!--      
     <section class="Works works-project4">
         <div class="info-section">
             <div class="project-details">
@@ -138,7 +198,7 @@
             </a>
             </div>
         </div>
-    </section>
+    </section> -->
 
     <!-- Quinto Projeto -->
     <section class="Works works-project5">
@@ -166,7 +226,7 @@
                     <li><a href="#home">Home</a></li>
                     <li><a href="#about">About</a></li>
                     <li><a href="#works">Works</a></li>
-                    <li><a href="#contaact">Playground</a></li>
+                    <!-- <li><a href="#contaact">Playground</a></li> -->
                 </ul>
             </div>
 
