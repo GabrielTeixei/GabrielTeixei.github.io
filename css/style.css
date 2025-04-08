@@ -256,7 +256,7 @@ section {
     animation: fadeInText 2s ease-out;
 }
 
-/* IMAGEM */
+/* IMAGEM - Ajuste para retangular e mais alta do que larga, com bordas arredondadas */
 .home-image {
     flex: 1;
     display: flex;
@@ -265,9 +265,9 @@ section {
 }
 
 .home-image img {
-    width: 250px;
-    height: 250px;
-    border-radius: 50%;
+    width: 400px; /* Largura menor */
+    height: 550px; /* Altura maior */
+    border-radius: 15px; /* Bordas arredondadas */
     object-fit: cover;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
     animation: zoomIn 2s ease-out;
@@ -316,8 +316,8 @@ section {
     }
 
     .home-image img {
-        width: 200px;
-        height: 200px;
+        width: 180px; /* Largura menor */
+        height: 320px; /* Altura maior */
     }
 }
 
@@ -332,8 +332,8 @@ section {
     }
 
     .home-image img {
-        width: 160px;
-        height: 160px;
+        width: 140px; /* Largura menor */
+        height: 240px; /* Altura maior */
     }
 }
 
