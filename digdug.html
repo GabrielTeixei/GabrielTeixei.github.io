@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,7 +11,6 @@
     <link rel="icon" href="./assets/img/logo.png" type="image/png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <style>
-        /* Estilo do menu lateral */
         #myNav {
             height: 100%;
             width: 0;
@@ -45,7 +45,6 @@
             margin-left: 50px;
         }
 
-        /* Estilo do botão de abrir menu */
         .open-btn {
             font-size: 20px;
             color: white;
@@ -58,22 +57,19 @@
         }
     </style>
 </head>
+
 <body>
-    <!-- Menu lateral -->
     <div id="myNav" class="overlay">
-        <a href="javascript:void(0)" class="close-btn" onclick="closeNav()">&times;</a>
-        <a href="index.html#home">Home</a> 
+        <a href="javascript:void(0)" class="close-btn" onclick="closeNavprojeto()">&times;</a>
+        <a href="index.html#home">Home</a>
         <a href="index.html#about">Sobre</a>
         <a href="index.html#works">Projetos</a>
         <a href="index.html#contact">Contato</a>
     </div>
-    
 
-    <!-- Botão para abrir o menu -->
-    <span class="open-btn" onclick="openNav()">☰ Menu</span>
+    <span class="open-btn" onclick="openNavprojeto()">☰ Menu</span>
 
-    <!-- Conteúdo principal -->
-    <div class="container" id="home"> <!-- Adicionamos o id aqui -->
+    <div class="container" id="home">
         <img src="./assets/img/DIgDug.png" alt="DigDug Banner" class="header-img">
 
         <div class="main-content">
@@ -98,27 +94,8 @@
         </div>
     </div>
 
-    <script>
-        // Função para abrir o menu lateral
-        function openNav() {
-            document.getElementById("myNav").style.width = "250px";
-        }
 
-        // Função para fechar o menu lateral
-        function closeNav() {
-            document.getElementById("myNav").style.width = "0";
-        }
-
-        // Adiciona rolagem suave ao clicar nos links do menu
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener("click", function (e) {
-        e.preventDefault();
-        document.querySelector(this.getAttribute("href")).scrollIntoView({
-            behavior: "smooth"
-        });
-    });
-});
-
-    </script>
+    <script src="js/script.js"></script>
 </body>
+
 </html>

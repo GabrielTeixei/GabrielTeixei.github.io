@@ -49,13 +49,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
             setTimeout(() => {
                 nameContainer.style.opacity = 1;
-                openBtn.style.display = 'block';    
+                openBtn.style.display = 'block';
             }, 2000);
 
             //tempo de exibição da classe no-scroll
-            setTimeout(() => {  
+            setTimeout(() => {
                 document.body.classList.remove('no-scroll');
-            }, AnimationDuration + welcomeAnimationDuration); 
+            }, AnimationDuration + welcomeAnimationDuration);
         }, welcomeAnimationDuration);
     }, AnimationDuration);
 
@@ -68,13 +68,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
 document.addEventListener('DOMContentLoaded', () => {
     const letters = document.querySelectorAll('.letter');
-    const nameParts = document.querySelectorAll('.name-part'); 
-    const largeNameLetters = document.querySelectorAll('.large-name .name-letter'); 
+    const nameParts = document.querySelectorAll('.name-part');
+    const largeNameLetters = document.querySelectorAll('.large-name .name-letter');
 
     nameParts.forEach((namePart, index) => {
         setTimeout(() => {
             namePart.classList.add('animate-in');
-        }, index * 200); 
+        }, index * 200);
     });
 
     // Tempo da animação para "Melo" e "Gabriel"
@@ -100,11 +100,11 @@ document.addEventListener('DOMContentLoaded', () => {
 // Função para animar as letras de "MELO" e "GABRIEL"
 function animateLargeName() {
     const largeNameLetters = document.querySelectorAll('.large-name .name-letter');
-    
+
     largeNameLetters.forEach((letter, index) => {
         setTimeout(() => {
             letter.classList.add('animate-in');
-        }, index * 100); 
+        }, index * 100);
     });
 }
 
@@ -123,7 +123,7 @@ const observer = new IntersectionObserver(entries => {
         }
     });
 }, {
-    threshold: 0.2 
+    threshold: 0.2
 });
 
 // Aplica cima projeto
@@ -144,7 +144,7 @@ const videoElement = document.querySelector('.project-preview video');
 
 videoElement.addEventListener('mousemove', (event) => {
     customCursor.style.display = 'block';
-    customCursor.style.top = `${event.clientY + 15}px`; 
+    customCursor.style.top = `${event.clientY + 15}px`;
     customCursor.style.left = `${event.clientX + 15}px`;
 });
 
@@ -158,10 +158,10 @@ document.addEventListener('DOMContentLoaded', () => {
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                entry.target.classList.add('animate-in'); 
+                entry.target.classList.add('animate-in');
             }
         });
-    }, { threshold: 0.5 }); 
+    }, { threshold: 0.5 });
 
     videos.forEach(video => observer.observe(video));
 });
@@ -172,9 +172,9 @@ function openNav() {
     const navItems = document.querySelectorAll('.nav-item');
     navItems.forEach((item, index) => {
         setTimeout(() => {
-            item.classList.remove('animate-out'); 
-            item.classList.add('animate-in'); 
-        }, index * 100); 
+            item.classList.remove('animate-out');
+            item.classList.add('animate-in');
+        }, index * 100);
     });
 }
 
@@ -184,8 +184,28 @@ function closeNav() {
 
     const navItems = document.querySelectorAll('.nav-item');
     navItems.forEach(item => {
-        item.classList.remove('animate-in'); 
-        item.classList.add('animate-out'); 
+        item.classList.remove('animate-in');
+        item.classList.add('animate-out');
     });
 }
 
+
+
+//aqui é proejtos
+
+function openNavprojeto() {
+    document.getElementById("myNav").style.width = "250px";
+}
+
+function closeNavprojeto() {
+    document.getElementById("myNav").style.width = "0";
+}
+
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener("click", function (e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute("href")).scrollIntoView({
+            behavior: "smooth"
+        });
+    });
+});
