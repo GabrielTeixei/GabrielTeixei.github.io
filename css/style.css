@@ -800,7 +800,7 @@ section {
     }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 750px) {
     .text-line {
         font-size: 2em;
         width: 100%;
