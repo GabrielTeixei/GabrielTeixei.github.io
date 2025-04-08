@@ -220,17 +220,19 @@ section {
     text-align: center;
     animation: fadeIn 2s ease-in-out;
     padding: 40px 20px;
+    box-sizing: border-box;
 }
 
 /* CONTAINER */
 .home-container {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    justify-content: center; /* Centraliza o conteúdo */
+    align-items: center; /* Centraliza o conteúdo */
     width: 100%;
     max-width: 1200px;
     flex-wrap: wrap;
     gap: 30px;
+    text-align: center; /* Centraliza o texto */
 }
 
 /* TEXTO */
@@ -302,6 +304,7 @@ section {
     .home-container {
         flex-direction: column;
         gap: 20px;
+        justify-content: center; /* Garante centralização em dispositivos pequenos */
     }
 
     .home-text h1 {
@@ -339,19 +342,19 @@ section {
 .certificates {
     padding: 60px 20px;
     text-align: center;
-  }
-  
-  .certificates h3 {
+}
+
+.certificates h3 {
     font-size: 3rem;
     font-weight: 800;
     color: #222;
     margin-bottom: 40px;
     text-transform: uppercase;
     letter-spacing: 1px;
-  }
-  
-  /* GRID FLEXÍVEL */
-  .certificates-container {
+}
+
+/* GRID FLEXÍVEL */
+.certificates-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
     gap: 20px;
@@ -359,10 +362,11 @@ section {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 10px;
-  }
-  
-  /* CARTÃO INDIVIDUAL */
-  .certificate-item {
+    box-sizing: border-box; 
+}
+
+/* CARTÃO INDIVIDUAL */
+.certificate-item {
     background-color: #fff;
     border-radius: 16px;
     box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
@@ -370,123 +374,130 @@ section {
     display: flex;
     flex-direction: column;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-  }
-  
-  .certificate-item:hover {
+    width: 100%; 
+    box-sizing: border-box; 
+}
+
+.certificate-item:hover {
     transform: translateY(-6px);
     box-shadow: 0 10px 24px rgba(0, 0, 0, 0.12);
-  }
-  
-  /* IMAGEM */
-  .certificate-image {
+}
+
+/* IMAGEM */
+.certificate-image {
     width: 100%;
     height: 180px;
     overflow: hidden;
-  }
-  
-  .certificate-image img {
+}
+
+.certificate-image img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     transition: transform 0.4s ease;
-  }
-  
-  .certificate-image img:hover {
+}
+
+.certificate-image img:hover {
     transform: scale(1.05);
-  }
-  
-  /* TEXTO */
-  .certificate-text {
+}
+
+/* TEXTO */
+.certificate-text {
     padding: 20px;
     text-align: left;
-  }
-  
-  .certificate-text h4 {
+}
+
+.certificate-text h4 {
     font-size: 1.3rem;
     color: #111;
     font-weight: 700;
     margin-bottom: 10px;
-  }
-  
-  .certificate-text p {
+}
+
+.certificate-text p {
     font-size: 1rem;
     color: #555;
     margin-bottom: 6px;
     line-height: 1.5;
-  }
-  
-  .certificate-text a {
+}
+
+.certificate-text a {
     display: inline-block;
     color: #6a00ff;
     font-weight: 500;
     text-decoration: none;
     margin-top: 10px;
     transition: color 0.2s ease;
-  }
-  
-  .certificate-text a:hover {
+}
+
+.certificate-text a:hover {
     color: #4500aa;
-  }
-  
-  /* RESPONSIVO - TABLETS */
-  @media (max-width: 800) {
+}
+
+/* RESPONSIVO - TABLETS */
+@media (max-width: 800px) {
     .certificates {
-      padding: 40px 15px;
+        padding: 40px 15px;
     }
-  
+
     .certificates h3 {
-      font-size: 2.5rem;
+        font-size: 2.5rem;
     }
-  
+
     .certificate-text {
-      padding: 16px;
+        padding: 16px;
     }
-  
+
     .certificate-text h4 {
-      font-size: 1.2rem;
+        font-size: 1.2rem;
     }
-  
+
     .certificate-text p {
-      font-size: 0.95rem;
+        font-size: 0.95rem;
     }
-  }
-  
-  /* RESPONSIVO - TELEMÓVEIS PEQUENOS */
-  @media (max-width: 700px) {
+}
+
+/* RESPONSIVO - TELEMÓVEIS PEQUENOS */
+@media (max-width: 480px) {
     .certificates {
-      padding: 30px 10px;
+        padding: 20px 10px;
     }
-  
+
     .certificates h3 {
-      font-size: 2rem;
+        font-size: 1.8rem; 
+        margin-bottom: 30px;
     }
-  
+
     .certificates-container {
-      grid-template-columns: 1fr;
+        grid-template-columns: 1fr;
+        padding: 0 10px;
     }
-  
+
     .certificate-item {
-      max-width: 100%;
+        max-width: 80%; 
+        box-sizing: border-box;
+        margin: 0 auto; 
     }
-  
+
     .certificate-image {
-      height: 140px;
+        height: 120px; 
     }
-  
+
     .certificate-text {
-      padding: 14px;
+        padding: 12px;
     }
-  
+
     .certificate-text h4 {
-      font-size: 1rem;
+        font-size: 1.1rem;
     }
-  
+
     .certificate-text p,
     .certificate-text a {
-      font-size: 0.85rem;
+        font-size: 0.9rem; 
     }
-  }
-  
+}
+
+
 
 /* menu */
 .nav-overlay {
