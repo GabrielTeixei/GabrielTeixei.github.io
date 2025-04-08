@@ -337,7 +337,6 @@ section {
     }
 }
 
-
 /* ==== CERTIFICADOS SECTION ==== */
 .certificates {
     padding: 60px 20px;
@@ -362,7 +361,7 @@ section {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 10px;
-    box-sizing: border-box; 
+    box-sizing: border-box;
 }
 
 /* CARTÃO INDIVIDUAL */
@@ -374,8 +373,9 @@ section {
     display: flex;
     flex-direction: column;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    width: 100%; 
-    box-sizing: border-box; 
+    width: 100%;
+    box-sizing: border-box;
+    margin: 0 auto; /* Centraliza o cartão dentro do grid */
 }
 
 .certificate-item:hover {
@@ -464,8 +464,10 @@ section {
     }
 
     .certificates h3 {
-        font-size: 1.8rem; 
+        font-size: 1.8rem;
         margin-bottom: 30px;
+
+        margin-right: 5%;
     }
 
     .certificates-container {
@@ -474,13 +476,16 @@ section {
     }
 
     .certificate-item {
-        max-width: 80%; 
+        width: 100%;
+        max-width: 95%; 
         box-sizing: border-box;
         margin: 0 auto; 
+        margin-bottom: 2%;
+        margin-right: 5%;
     }
 
     .certificate-image {
-        height: 120px; 
+        height: 120px;
     }
 
     .certificate-text {
@@ -493,10 +498,9 @@ section {
 
     .certificate-text p,
     .certificate-text a {
-        font-size: 0.9rem; 
+        font-size: 0.9rem;
     }
 }
-
 
 
 /* menu */
