@@ -4,7 +4,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const nameParts = document.querySelectorAll('.name-part');
     const nameContainer = document.querySelector('.name-container');
     const openBtn = document.getElementById('openBtn');
-    // const closeBtn = document.querySelector('.closebtn');
     const navLinks = document.querySelectorAll('.overlay-content a');
 
     // Adiciona a classe para ocultar a barra de rolagem
@@ -87,7 +86,6 @@ document.addEventListener('DOMContentLoaded', () => {
             }, index * 70); // Atraso entre as letras de "Welcome"
         });
 
-        // Define o tempo da animação de "Welcome"
         const welcomeAnimationDuration = letters.length * 90 + 2200;
 
         setTimeout(() => {
@@ -188,10 +186,6 @@ function closeNav() {
         item.classList.add('animate-out');
     });
 }
-
-
-
-//aqui é proejtos
 
 function openNavprojeto() {
     document.getElementById("myNav").style.width = "250px";
