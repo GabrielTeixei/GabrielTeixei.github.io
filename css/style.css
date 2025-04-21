@@ -226,13 +226,13 @@ section {
 /* CONTAINER */
 .home-container {
     display: flex;
-    justify-content: center; /* Centraliza o conteúdo */
-    align-items: center; /* Centraliza o conteúdo */
+    justify-content: center; 
+    align-items: center; 
     width: 100%;
     max-width: 1200px;
     flex-wrap: wrap;
     gap: 30px;
-    text-align: center; /* Centraliza o texto */
+    text-align: center; 
 }
 
 /* TEXTO */
@@ -256,7 +256,6 @@ section {
     animation: fadeInText 2s ease-out;
 }
 
-/* IMAGEM - Ajuste para retangular e mais alta do que larga, com bordas arredondadas */
 .home-image {
     flex: 1;
     display: flex;
@@ -265,9 +264,9 @@ section {
 }
 
 .home-image img {
-    width: 400px; /* Largura menor */
-    height: 550px; /* Altura maior */
-    border-radius: 15px; /* Bordas arredondadas */
+    width: 400px; 
+    height: 550px; 
+    border-radius: 15px; 
     object-fit: cover;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
     animation: zoomIn 2s ease-out;
@@ -304,7 +303,7 @@ section {
     .home-container {
         flex-direction: column;
         gap: 20px;
-        justify-content: center; /* Garante centralização em dispositivos pequenos */
+        justify-content: center;
     }
 
     .home-text h1 {
@@ -316,8 +315,8 @@ section {
     }
 
     .home-image img {
-        width: 180px; /* Largura menor */
-        height: 320px; /* Altura maior */
+        width: 180px; 
+        height: 320px; 
     }
 }
 
@@ -332,8 +331,8 @@ section {
     }
 
     .home-image img {
-        width: 140px; /* Largura menor */
-        height: 240px; /* Altura maior */
+        width: 140px; 
+        height: 240px; 
     }
 }
 
@@ -859,6 +858,7 @@ section {
     justify-content: space-between;
     align-items: flex-start;
     padding: 0;
+    opacity: 1;
     position: relative;
     color: #fff;
 }
@@ -893,7 +893,7 @@ section {
     width: 100%;
     height: auto;
     max-width: 700px;
-    opacity: 0;
+    opacity: 1;
     transform: translateY(100px);
     transition: opacity 1s ease, transform 1s ease;
 }
@@ -906,7 +906,7 @@ section {
 
 .project-preview img.animate-out,
 .project-preview video.animate-out {
-    opacity: 0;
+    opacity: 1;
     transform: translateY(100px);
 }
 
